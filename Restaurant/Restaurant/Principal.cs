@@ -12,8 +12,13 @@ namespace Restaurant
 {
     public partial class Principal : Form
     {
+        User u;
+        
         public Principal()
         {
+             u=GetUsuario();
+
+
             InitializeComponent();
         }
 
@@ -22,15 +27,16 @@ namespace Restaurant
             string user = UserTextBox.Text;
             string password = PasswordTexBox.Text;
 
-            User usuario = GetUsuario();
+            DashBoard d = new DashBoard(u);
 
-            if (user==usuario.UserName&&password==usuario.Password)
+            if (user==u.UserName&&password==u.Password)
             {
-                MessageBox.Show("Hola Bienvenido "+usuario.Name);
+                d.Show();
+               
             }
             else
             {
-                MessageBox.Show("Contraseña o Username Invalido");
+                
             }
         }
 
