@@ -6,11 +6,7 @@ using System.Threading.Tasks;
 
 namespace Bank
 {
-    class Program
+    public class CurrentAccount
     {
-        static void Main(string[] args)
-        {
-
-        }
     }
 }
